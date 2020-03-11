@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Week_3_Code_Along
+namespace Week_3_code_along
 {
     class Dog
     {
-        //fields 
         public string Breed;
         public int Height;
         public string Name;
@@ -21,13 +20,7 @@ namespace Week_3_Code_Along
 
         public void SayName()
         {
-            MessageBox.Show("My name is " + Name + ".");
+            MessageBox.Show("My name is " + Name);
         }
-
-        public void Sit()
-        {
-            MessageBox.Show(""+Name+"has sat");
-        }
-
     }
 }

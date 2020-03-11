@@ -33,12 +33,21 @@ namespace MovieList
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            Movie movieToAdd = new Movie(titleInput.Text, int.Parse(releaseYearInput.Text));
+            if (int.Parse(ratingInput.Text) > 10 || int.Parse(ratingInput.Text) < 1)
+            {
+                MessageBox.Show("User rating is invalid.\nEnter a number between 1 and 10.");
+                ratingInput.Clear();
+                //don't continue, break.
+                
+            }
+
+            Movie movieToAdd = new Movie(titleInput.Text, int.Parse(releaseYearInput.Text), int.Parse(ratingInput.Text));
 
             MovieList.Add(movieToAdd);
 
             titleInput.Clear();
             releaseYearInput.Clear();
+            ratingInput.Clear();
         }
 
         private void ShowButton_Click(object sender, RoutedEventArgs e)

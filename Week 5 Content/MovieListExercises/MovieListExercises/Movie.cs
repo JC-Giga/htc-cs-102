@@ -17,17 +17,25 @@ namespace MovieList
             set;
         }
 
+        public int Rating
+        {
+            get;
+            set;
+        }
+
         public void ShowDetails()
         {
             string infoString = "Title: " + this.Title;
             infoString += "\nRelease Year: " + this.ReleaseYear;
+            infoString += "\nUser Rating: " + this.Rating;
             MessageBox.Show(infoString);
         }
 
-        public Movie(string myTitle, int myReleaseYear)
+        public Movie(string myTitle, int myReleaseYear, int myRating)
         {
             this.Title = myTitle;
             this.ReleaseYear = myReleaseYear;
+            this.Rating = myRating;
         }
     }
 }
