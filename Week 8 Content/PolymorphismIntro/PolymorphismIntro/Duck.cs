@@ -9,7 +9,8 @@ namespace PolymorphismIntro
 {
     public class Duck : Animal
     {
-        public void Quack()
+
+        public override void Speak()
         {
             MessageBox.Show("Quack");
         }
